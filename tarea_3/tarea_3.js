@@ -49,7 +49,7 @@ users = [{"id":1,"first_name":"Kary","last_name":"Dodell","email":"kdodell0@nba.
 {"id":49,"first_name":"Jerrilee","last_name":"Youngs","email":"jyoungs1c@phpbb.com","gender":"Female","ip_address":"66.232.233.230"},
 {"id":50,"first_name":"Manny","last_name":"Tabord","email":"mtabord1d@bloglovin.com","gender":"Male","ip_address":"195.189.236.98"}]
 
-// Buscar el usuario por su ID y mostrar su información en la consola.
+// buscar el usuario por su ID y mostrar su informacion en la consola.
 const user_id = prompt("Ingrese el ID del usuario que desea buscar:");
 let usuario_encontrado = false;
 
@@ -64,12 +64,6 @@ if (usuario_encontrado == false) {
     console.log("Usuario no encontrado");
 }
 
-const lista_generos = [];
-for (let i = 0; i < users.length; i++) {
-    lista_generos.push(users[i].gender);
-}
-//console.log(`Lista: ${lista_generos.join(", ")}`);
-
 // contar el numero de usuarios por cada genero y mostrar el resultado en la consola.
 const conteoGenero = users.reduce((acc, user) => {
     const genero = user.gender;
@@ -83,16 +77,3 @@ const conteoGenero = users.reduce((acc, user) => {
 }, {});
 
 console.log(conteoGenero);
-
-
-// const conteoPais = users.reduce((acc, user) => {
-//  const country = user.country;
-
-//  if (acc[country]) {
-//    acc[country]++;
-//  } else {
-//    acc[country] = 1;
-//  }
-
-//  return acc;
-// }, {});
